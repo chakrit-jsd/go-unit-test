@@ -1,5 +1,5 @@
-setting vs-code golang cover test
-
+#### Unit Test VS Code Configuration
+```json
 "go.coverOnSave": true,
 "go.coverOnSingleTest": true,
 "go.coverageDecorator": {
@@ -9,7 +9,28 @@ setting vs-code golang cover test
     "coveredGutterStyle": "blockgreen",
     "uncoveredGutterStyle": "blockred"
 }
+```
 
-command
-<!-- run test -->
-go test <module-name>/<package>
+#### command
+
+* run test
+```
+go test module-name/package-name
+go test module-name/package-name -v
+```
+* run subtest
+```
+go test module-name/package-name -run="func-name/sub-name"
+```
+* check cover
+```
+go test module-name/package-name -cover
+```
+* benchmark
+```
+go test module-name/package-name -bench=funcname
+```
+* benchmark memory
+```
+go test module-name/package-name -bench=funcname -benchmem
+```

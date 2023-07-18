@@ -26,3 +26,11 @@ go test module-name/package-name -run="func-name/sub-name"
 ```
 go test module-name/package-name -cover
 ```
+* benchmark
+```
+go test module-name/package-name -bench=funcname
+```
+* benchmark memory
+```
+go test module-name/package-name -bench=funcname -benchmem
+```
